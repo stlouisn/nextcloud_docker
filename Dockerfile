@@ -8,6 +8,7 @@ RUN \
 	apt-get update && \
 
 	# Enable apache2 servername.conf
+	touch /etc/apache2/conf-available/servername.conf
 	a2enconf servername
 
 	# Install cron && \

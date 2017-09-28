@@ -7,6 +7,9 @@ RUN \
 	# Update apt-cache && \
 	apt-get update && \
 
+	# Enable apache2 servername.conf
+	a2enconf servername
+
 	# Install cron && \
 	apt-get install -y --no-install-recommends \
 		cron && \

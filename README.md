@@ -1,6 +1,6 @@
 ### Nextcloud Docker
 
-*Private File Hosting and Cloud Services*
+*File Hosting and Cloud Services*
 
 [![Version](https://images.microbadger.com/badges/version/stlouisn/nextcloud.svg)](https://microbadger.com/images/stlouisn/nextcloud)
 [![Commit](https://images.microbadger.com/badges/commit/stlouisn/nextcloud.svg)](https://microbadger.com/images/stlouisn/nextcloud)

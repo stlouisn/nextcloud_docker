@@ -35,6 +35,6 @@ RUN \
 		/tmp/* \
 		/var/lib/apt/lists/*
 
-COPY docker.rootfs /
+COPY supervisor.conf /etc/supervisor/supervisor.conf
 
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisor.conf"]

@@ -18,6 +18,8 @@ RUN \
 
 	# Install supervisord && \
 	apt-get install -y --no-install-recommends \
+		-o Dpkg::Options::="--force-confdef" \
+		-o Dpkg::Options::="--force-confold" \
 		supervisor && \
 
 	# Configure supervisord && \

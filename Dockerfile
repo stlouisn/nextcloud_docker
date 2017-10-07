@@ -1,15 +1,13 @@
 FROM nextcloud:apache
 
+COPY docker.rootfs /
+
 RUN \
 
 	export DEBIAN_FRONTEND=noninteractive && \
 
 	# Update apt-cache && \
 	apt-get update && \
-
-	# Enable apache2 servername.conf
-	#touch /etc/apache2/conf-available/servername.conf && \
-	#a2enconf servername && \
 
 	# Install cron && \
 	apt-get install -y --no-install-recommends \
@@ -36,7 +34,5 @@ RUN \
 		/root/.wget-hsts \
 		/tmp/* \
 		/var/lib/apt/lists/*
-
-COPY supervisor.conf /etc/supervisor/supervisor.conf
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisor.conf"]

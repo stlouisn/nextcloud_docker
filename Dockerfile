@@ -15,6 +15,9 @@ RUN \
 	apt-get install -y --no-install-recommends \
 		cron && \
 
+	# Configure cron && \
+	echo "*/15 * * * * su - www-data -s /bin/bash -c \"php -f /var/www/html/cron.php\"" | crontab - && \
+
 	# Install supervisord && \
 	apt-get install -y --no-install-recommends \
 		supervisor && \
@@ -22,7 +25,6 @@ RUN \
 	# Configure supervisord && \
 	mkdir -p /var/log/supervisord && \
 	mkdir -p /var/run/supervisord && \
-	echo "*/15 * * * * su - www-data -s /bin/bash -c \"php -f /var/www/html/cron.php\"" | crontab - && \
 
 	# Clean apt-cache && \
 	apt-get autoremove -y --purge && \

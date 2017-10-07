@@ -23,6 +23,7 @@ RUN \
 	# Configure supervisord && \
 	mkdir -p /var/log/supervisord && \
 	mkdir -p /var/run/supervisord && \
+	rmdir /etc/supervisor/conf.d && \
 
 	# Clean apt-cache && \
 	apt-get autoremove -y --purge && \
@@ -35,4 +36,4 @@ RUN \
 		/tmp/* \
 		/var/lib/apt/lists/*
 
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisor.conf"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]

@@ -25,6 +25,7 @@ RUN \
 	# Configure supervisord && \
 	mkdir -p /var/log/supervisord && \
 	mkdir -p /var/run/supervisord && \
+	rm -f /etc/supervisor/supervisord.conf.dpkg-dist && \
 	rmdir /etc/supervisor/conf.d && \
 
 	# Clean apt-cache && \

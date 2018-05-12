@@ -32,11 +32,12 @@ RUN \
 	apt-get autoremove -y --purge && \
 	apt-get autoclean -y && \
 
-	# Cleanup temporary folders
-	rm -rf \
-		/root/.cache \
-		/root/.wget-hsts \
-		/tmp/* \
-		/var/lib/apt/lists/*
+    # Cleanup temporary folders
+    rm -rf \
+        /root/.cache \
+        /root/.wget-hsts \
+        /tmp/* \
+        /var/lib/apt/lists/* \
+		/var/log/*
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]

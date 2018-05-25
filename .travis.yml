@@ -28,6 +28,7 @@ before_install:
   - sudo apt-get update -q
   - sudo apt-get upgrade -q -y
   - docker version
+  - docker network inspect bridge
 
 install:
   - sed -i -e '/^$/d' -e 's/^[ \t]*//' -e '/^#/d' Dockerfile

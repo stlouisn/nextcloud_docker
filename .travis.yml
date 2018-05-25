@@ -28,13 +28,10 @@ before_install:
   - sudo apt-get update -q
   - sudo apt-get upgrade -q -y
   - docker version
-  - docker network inspect bridge
-  - docker info
   - sudo /sbin/sysctl net.ipv4.conf.all.forwarding
   - sudo /sbin/sysctl -w net.ipv4.conf.all.forwarding=1
-  - docker network inspect bridge
-  - docker info
-  
+  - sudo /sbin/sysctl net.ipv4.conf.all.forwarding
+
 install:
   - sed -i -e '/^$/d' -e 's/^[ \t]*//' -e '/^#/d' Dockerfile
 #  - chmod 0544 rootfs/usr/local/bin/*.sh

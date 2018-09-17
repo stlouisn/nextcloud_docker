@@ -38,6 +38,6 @@ RUN \
         /root/.wget-hsts \
         /tmp/* \
         /var/lib/apt/lists/* \
-		/var/log/*
+	/var/log/*
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]

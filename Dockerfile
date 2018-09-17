@@ -9,14 +9,7 @@ RUN \
     # Update apt-cache
     apt-get update && \
 
-	# Install cron
-	apt-get install -y --no-install-recommends \
-		cron && \
-
-	# Configure cron
-	echo "*/15 * * * * su - www-data -s /bin/bash -c \"php -f /var/www/html/cron.php\"" | crontab - && \
-
-	# Install supervisord
+    # Install supervisord
 	apt-get install -y --no-install-recommends \
 		-o Dpkg::Options::="--force-confdef" \
 		-o Dpkg::Options::="--force-confold" \

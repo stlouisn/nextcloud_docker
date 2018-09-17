@@ -14,7 +14,6 @@ services:
       - /docker/nextcloud/html:/var/www/html:rw
       - /docker/nextcloud/userdata:/var/www/html/data:rw
     tmpfs:
-      - /var/log/apache2
       - /var/log/supervisord
     logging:
       driver: json-file

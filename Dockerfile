@@ -21,6 +21,10 @@ RUN \
 	rm -f /etc/supervisor/supervisord.conf.dpkg-dist && \
 	rmdir /etc/supervisor/conf.d && \
 
+    # Install sudo
+    apt-get install -y --no-install-recommends \
+        sudo && \
+
 	# Clean apt-cache
 	apt-get autoremove -y --purge && \
 	apt-get autoclean -y && \

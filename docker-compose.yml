@@ -16,10 +16,5 @@ services:
       - /docker/nextcloud/userdata:/var/www/html/data:rw
     tmpfs:
       - /var/log/supervisord
-    logging:
-      driver: json-file
-      options:
-        max-size: "10m"
-        max-file: "3"
     ports:
       - 8080:80

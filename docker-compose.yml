@@ -12,6 +12,7 @@ services:
     restart: always
     volumes:
       - /docker/nextcloud/html:/var/www/html:rw
+      - /docker/nextcloud/config:/var/www/html/config:rw
       - /docker/nextcloud/userdata:/var/www/html/data:rw
     tmpfs:
       - /var/log/supervisord

@@ -11,9 +11,9 @@ services:
       - TZ=UTC
     restart: always
     volumes:
-      - /docker/nextcloud/html:/var/www/html:rw
-      - /docker/nextcloud/config:/var/www/html/config:rw
-      - /docker/nextcloud/userdata:/var/www/html/data:rw
+      - /docker/nextcloud/html:/var/www/html
+      - /docker/nextcloud/config:/var/www/html/config
+      - /docker/nextcloud/userdata:/var/www/html/data
     tmpfs:
       - /var/log/supervisord
     ports:

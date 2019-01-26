@@ -25,16 +25,16 @@ RUN \
     apt-get install -y --no-install-recommends \
         sudo && \
 
-	# Clean apt-cache
-	apt-get autoremove -y --purge && \
-	apt-get autoclean -y && \
+    # Clean apt-cache
+    apt-get autoremove -y --purge && \
+    apt-get clean -y && \
+    apt-get autoclean -y && \
 
     # Cleanup temporary folders
     rm -rf \
         /root/.cache \
         /root/.wget-hsts \
         /tmp/* \
-        /var/lib/apt/lists/* \
-        /var/log/*
+        /var/lib/apt/lists/*
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]

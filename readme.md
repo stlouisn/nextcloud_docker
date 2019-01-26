@@ -16,7 +16,7 @@
 [![Docker Pulls][docker_pulls_logo]][docker_hub_url]
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-File Hosting and Personal Cloud
+Nextcloud is an open source, self-hosted file sharing and communication platform. Access & sync your files, contacts, calendars & communicate and collaborate across your devices. You decide what happens with your data, where it is and who can access it!
 
 ### Tags
 
@@ -34,4 +34,6 @@ File Hosting and Personal Cloud
 
 ### Links
 
-https://nextcloud.com/
+*https://nextcloud.com/*
+
+*https://github.com/nextcloud*

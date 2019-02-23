@@ -7,7 +7,6 @@ if: |
   branch = master AND \
   ! commit_message =~ /readme.md/ AND \
   ! commit_message =~ /docker-compose.yml/ OR \
-  TRAVIS_EVENT_TYPE = cron OR \
   type = cron
 
 addons:

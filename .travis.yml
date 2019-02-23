@@ -5,9 +5,10 @@ sudo: required
 
 if: |
   branch = master AND \
-  NOT commit_message =~ /readme.md/ AND \
-  NOT commit_message =~ /docker-compose.yml/ OR \
-  TRAVIS_EVENT_TYPE = cron
+  ! commit_message =~ /readme.md/ AND \
+  ! commit_message =~ /docker-compose.yml/ OR \
+  TRAVIS_EVENT_TYPE = cron OR \
+  type = cron
 
 addons:
   apt:
@@ -30,8 +31,6 @@ env:
       DOCKER_VERSION="$((docker pull library/nextcloud:apache && docker run -it --rm library/nextcloud:apache /bin/bash -c env) | grep NEXTCLOUD_VERSION | awk -F '=' {'print $2'})"
 
 before_install:
-  - echo ${TRAVIS_EVENT_TYPE}
-  - echo ${event}
   - docker version
   - sudo /sbin/sysctl -w net.ipv4.conf.all.forwarding=1
 

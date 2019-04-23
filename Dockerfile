@@ -9,6 +9,14 @@ RUN \
     # Update apt-cache
     apt-get update && \
 
+	# Install tzdata
+    apt-get install -y --no-install-recommends \
+        tzdata && \
+
+    # Install gosu
+    apt-get install -y --no-install-recommends \
+        gosu && \
+
     # Install supervisord
 	apt-get install -y --no-install-recommends \
 		-o Dpkg::Options::="--force-confdef" \
@@ -20,10 +28,6 @@ RUN \
 	mkdir -p /var/run/supervisord && \
 	rm -f /etc/supervisor/supervisord.conf.dpkg-dist && \
 	rmdir /etc/supervisor/conf.d && \
-
-    # Install sudo
-    apt-get install -y --no-install-recommends \
-        sudo && \
 
     # Clean apt-cache
     apt-get autoremove -y --purge && \

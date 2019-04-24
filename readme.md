@@ -20,8 +20,8 @@ Nextcloud is an open source, self-hosted file sharing and communication platform
 
 ### Tags
 
-[![Version](https://images.microbadger.com/badges/version/stlouisn/nextcloud.svg)][microbadger_url]
-[![Layers](https://images.microbadger.com/badges/image/stlouisn/nextcloud.svg)][microbadger_url]
+[![Version](https://images.microbadger.com/badges/version/stlouisn/nextcloud:latest.svg)][microbadger_url]
+[![Layers](https://images.microbadger.com/badges/image/stlouisn/nextcloud:latest.svg)][microbadger_url]
 
 ### Feature Requests
 

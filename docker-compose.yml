@@ -3,7 +3,7 @@ version: '2.4'
 services:
 
   nextcloud:
-    image: stlouisn/nextcloud
+    image: stlouisn/nextcloud:latest
     container_name: nextcloud
     hostname: nextcloud
     environment:
@@ -16,5 +16,12 @@ services:
       - /docker/nextcloud/userdata:/var/www/html/data
     tmpfs:
       - /var/log/supervisord
+    mem_limit: 1000M
+    memswap_limit: 2000M
+    logging:
+      driver: json-file
+        options:
+          max-size: "10M"
+          max-file: "3"
     ports:
       - 8080:80

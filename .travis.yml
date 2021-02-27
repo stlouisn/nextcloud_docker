@@ -3,6 +3,7 @@ dist: focal
 group: travis_latest
 language: shell
 
+
 if: |
   branch = master AND ! commit_message =~ /readme.md/ AND ! commit_message =~ /docker-compose.yml/
   OR type = cron

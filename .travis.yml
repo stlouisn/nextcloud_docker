@@ -11,7 +11,6 @@ if: |
 services:
   - docker
 
-
 env:
 
   global:
